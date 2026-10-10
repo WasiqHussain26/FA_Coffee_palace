@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FA Coffee Palace | Royal Coffee & Edible Cups Stall in KL</title>
+  <meta name="description" content="Visit FA Coffee Palace stall in Kuala Lumpur. Experience our signature coffee in a 100% edible cup! Wholesale opportunities available for hotels and events.">
+  
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS Integration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#161448', // Exact Logo Midnight Navy
+              navyLight: '#1f1c63',
+              gold: '#f7b928', // Exact Logo Crown Gold
+              goldLight: '#ffd700',
+              brown: '#b96d38', // Exact Logo Coffee Mug Terracotta Brown
+            }
+          },
+          fontFamily: {
+            cinzel: ['"Cinzel"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          animation: {
+            'infinite-scroll': 'scroll 30s linear infinite',
+          },
+          keyframes: {
+            scroll: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(calc(-50% - 1rem))' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #161448; /* brand.navy */
+      color: #ffffff;
+    }
+    
+    .starry-bg {
+      background-image: 
+        radial-gradient(1.5px 1.5px at 15% 15%, rgba(255,255,255,0.4) 100%, transparent),
+        radial-gradient(1px 1px at 35% 45%, rgba(247, 185, 40, 0.4) 100%, transparent),
+        radial-gradient(2px 2px at 75% 25%, rgba(255,255,255,0.4) 100%, transparent),
+        radial-gradient(1.5px 1.5px at 85% 85%, rgba(247, 185, 40, 0.4) 100%, transparent);
+      background-size: 400px 400px;
+    }
+
+    .glass-panel {
+      background: rgba(31, 28, 99, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(247, 185, 40, 0.2);
+    }
+    
+    .gold-glow {
+      box-shadow: 0 0 25px -5px rgba(247, 185, 40, 0.4);
+    }
+
+    /* Hide scrollbar for gallery but keep functionality if needed */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    /* Pause animation on hover for the gallery */
+    .pause-on-hover:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased starry-bg overflow-x-hidden selection:bg-brand-gold selection:text-brand-navy">
+
+  <!-- Top Informational Banner -->
+  <div class="bg-gradient-to-r from-brand-goldLight via-brand-gold to-brand-goldLight text-brand-navy py-2 px-4 text-center text-xs sm:text-sm font-bold tracking-wide uppercase shadow-md flex items-center justify-center gap-2">
+    <i class="fa-solid fa-store"></i>
+    <span>Visit our Physical Stall in KL • All Orders Placed In-Person</span>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 transition-all duration-300 bg-brand-navy/95 backdrop-blur-md border-b border-brand-gold/20" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-brand-navy border-2 border-brand-gold flex items-center justify-center relative overflow-hidden shadow-lg shadow-brand-gold/20 transition-transform group-hover:scale-105">
+          <span class="font-cinzel font-black text-brand-gold text-lg">FA</span>
+        </div>
+        <div>
+          <span class="font-cinzel text-lg sm:text-xl font-bold tracking-wider text-brand-gold block leading-tight">
+            FA COFFEE PALACE
+          </span>
+          <span class="text-[10px] tracking-widest text-slate-300 font-medium flex items-center gap-1 uppercase">
+            <i class="fa-solid fa-crown text-[9px] text-brand-gold"></i> Kuala Lumpur
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-200">
+        <a href="#edible-cup" class="hover:text-brand-gold transition-colors">The Edible Cup</a>
+        <a href="#wholesale" class="hover:text-brand-gold transition-colors text-brand-gold">Wholesale & B2B</a>
+        <a href="#gallery" class="hover:text-brand-gold transition-colors">Our Stall</a>
+        <a href="#menu" class="hover:text-brand-gold transition-colors">Menu</a>
+        <a href="#stall" class="hover:text-brand-gold transition-colors">Location</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-3">
+        <a href="#stall" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-navy hover:bg-brand-goldLight transition-all shadow-md">
+          <i class="fa-solid fa-location-dot"></i> Visit Us
+        </a>
+        <button id="mobileMenuBtn" class="lg:hidden text-brand-gold p-2 text-2xl focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-navyLight border-b border-brand-gold/30 px-6 py-6 space-y-4">
+      <a href="#edible-cup" class="block text-slate-200 py-1 mobile-link">The Edible Cup</a>
+      <a href="#wholesale" class="block text-brand-gold font-bold py-1 mobile-link">Wholesale & B2B (Hotels/Events)</a>
+      <a href="#gallery" class="block text-slate-200 py-1 mobile-link">Stall & Reviews Gallery</a>
+      <a href="#menu" class="block text-slate-200 py-1 mobile-link">Coffee Menu</a>
+      <a href="#stall" class="block text-slate-200 py-1 mobile-link">Location</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-10 pb-20">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-gold/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
+        <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full glass-panel text-brand-gold text-xs sm:text-sm font-bold tracking-widest uppercase">
+          <i class="fa-solid fa-star"></i>
+          Kuala Lumpur's Premier Coffee Experience
+        </div>
+
+        <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl font-bold leading-tight text-white max-w-4xl mx-auto">
+          Drink The Royal Coffee. <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-goldLight to-brand-brown">Eat The Cup.</span>
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-light">
+          Visit FA Coffee Palace at our KL stall. Savor rich artisan espresso served in a 100% crispy wafer cup that you can enjoy down to the very last bite.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="#stall" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-gold text-brand-navy font-bold text-sm uppercase tracking-wider transition-all hover:bg-brand-goldLight shadow-lg gold-glow flex items-center justify-center gap-2">
+            <i class="fa-solid fa-map-location-dot text-base"></i> Find Our Stall
+          </a>
+          <a href="#wholesale" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-brand-gold hover:bg-brand-navyLight font-semibold text-sm tracking-wide transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-handshake"></i> Wholesale / B2B
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="edible-cup" class="py-24 bg-brand-navyLight/30 border-y border-brand-gold/10 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <!-- IMAGE PLACEHOLDER (Left Side) -->
+          <div class="relative order-2 lg:order-1">
+            <div class="absolute -inset-2 bg-gradient-to-tr from-brand-gold via-brand-brown to-transparent rounded-3xl blur-xl opacity-30"></div>
+            <div class="relative rounded-3xl overflow-hidden border-2 border-brand-gold/40 shadow-2xl bg-brand-navy aspect-[4/5] sm:aspect-square flex items-center justify-center group">
+              
+              <!-- ⚠️ ADD YOUR MAIN EDIBLE CUP IMAGE HERE ⚠️ -->
+              <!-- Replace the src URL with your actual image file path, e.g., src="assets/edible-cup-main.jpg" -->
+              <img 
+                src="https://placehold.co/800x1000/161448/f7b928?text=Add+Main+Edible+Cup+Pic+Here" 
+                alt="FA Coffee Palace Edible Cup Spotlight" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <!-- ========================================== -->
+
+              <div class="absolute bottom-4 left-4 bg-brand-navy/90 backdrop-blur border border-brand-gold/50 px-4 py-2 rounded-xl text-brand-gold text-xs font-bold uppercase tracking-wider shadow-lg">
+                <i class="fa-solid fa-cookie-bite mr-1"></i> 100% Crispy Wafer
+              </div>
+            </div>
+          </div>
+
+          <!-- TEXT & RULES (Right Side) -->
+          <div class="order-1 lg:order-2 space-y-8 text-center lg:text-left">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-bold uppercase tracking-wider mb-4">
+                <i class="fa-solid fa-star"></i> The Main Attraction
+              </div>
+              <h2 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+                Your Coffee, Your Choice.
+              </h2>
+            </div>
+
+            <div class="space-y-6">
+              
+              <!-- Rule 1: Same Price -->
+              <div class="glass-panel p-6 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 hover:border-brand-gold/60 transition-colors">
+                <div class="w-14 h-14 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-2xl shrink-0">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-cinzel font-bold text-brand-gold mb-1">Exact Same Price!</h3>
+                  <p class="text-sm text-slate-300">
+                    Order any coffee at our stall and choose between a standard takeaway cup or our signature Edible Cup. <strong>There is ZERO extra charge.</strong> It is the exact same price for both options!
+                  </p>
+                </div>
+              </div>
+
+              <!-- Rule 2: Solo Purchase -->
+              <div class="glass-panel p-6 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 hover:border-brand-gold/60 transition-colors">
+                <div class="w-14 h-14 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-2xl shrink-0">
+                  <i class="fa-solid fa-boxes-packing"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-cinzel font-bold text-brand-gold mb-1">Buy Cups Individually</h3>
+                  <p class="text-sm text-slate-300">
+                    Don't want coffee right now? No problem! You can purchase our edible cups completely empty in <strong>any quantity you desire</strong> (singles, 5-packs, 10-packs) to take home.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="wholesale" class="py-24 relative overflow-hidden">
+      <!-- Background elegant texture -->
+      <div class="absolute inset-0 bg-brand-gold/5 pattern-dots opacity-20"></div>
+      
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="bg-gradient-to-br from-brand-navyLight to-brand-navy border border-brand-gold shadow-2xl rounded-3xl p-8 sm:p-12 text-center">
+          
+          <i class="fa-solid fa-hotel text-4xl text-brand-gold mb-6"></i>
+          
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mb-4">
+            Wholesale & Hospitality Partnerships
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto mb-10 leading-relaxed">
+            Elevate your guest experience. FA Coffee Palace supplies premium edible coffee cups in bulk to luxury hotels, prestigious cafes, corporate events, and wedding organizers across Malaysia. Surprise your clients with a zero-waste, unforgettable dessert-coffee experience.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+            <div class="glass-panel p-5 rounded-xl border border-brand-gold/30">
+              <i class="fa-solid fa-truck-fast text-2xl text-brand-gold mb-3"></i>
+              <h4 class="font-bold text-white text-sm mb-1">Bulk Quantities</h4>
+              <p class="text-xs text-slate-400">Available in large wholesale cartons for daily operations.</p>
+            </div>
+            <div class="glass-panel p-5 rounded-xl border border-brand-gold/30">
+              <i class="fa-solid fa-shield-halved text-2xl text-brand-gold mb-3"></i>
+              <h4 class="font-bold text-white text-sm mb-1">Premium Quality</h4>
+              <p class="text-xs text-slate-400">Consistent, leak-proof wafer quality protected for transport.</p>
+            </div>
+            <div class="glass-panel p-5 rounded-xl border border-brand-gold/30">
+              <i class="fa-solid fa-hand-holding-dollar text-2xl text-brand-gold mb-3"></i>
+              <h4 class="font-bold text-white text-sm mb-1">B2B Pricing</h4>
+              <p class="text-xs text-slate-400">Special discounted rates for our registered hospitality partners.</p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/60123456789?text=Hi%20FA%20Coffee%20Palace!%20I%20am%20interested%20in%20your%20B2B%20Wholesale%20options%20for%20my%20business." target="_blank" class="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-brand-gold text-brand-navy font-bold text-sm uppercase tracking-wider hover:bg-white transition-all shadow-lg gold-glow">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Inquire Wholesale Rates
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-brand-navy border-y border-brand-gold/20 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
+        <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-white mb-2">The FA Palace Experience</h2>
+        <p class="text-slate-400 text-sm">Real moments, stall action, and customer reviews.</p>
+      </div>
+
+      <!-- Infinite Marquee Scroll Container -->
+      <div class="relative w-full flex overflow-hidden group">
+        
+        <!-- Track that animates -->
+        <div class="flex gap-4 w-max animate-infinite-scroll pause-on-hover px-4">
+          
+          <!-- ⚠️ ADD YOUR STALL/REVIEW IMAGES & VIDEOS BELOW ⚠️ -->
+          <!-- You can mix and match images and videos. Just duplicate the blocks below. -->
+          
+          <!-- Item 1 (Video Example) -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <!-- Replace 'src' with your video path -->
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+            <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white backdrop-blur"><i class="fa-solid fa-video text-brand-gold mr-1"></i> Customer Review</div>
+          </div>
+
+          <!-- Item 2 (Image Example) -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <!-- Replace 'src' with your image path -->
+            <img src="pic1.png" class="w-full h-full object-cover" alt="Stall view">
+          </div>
+
+          <!-- Item 3 (Image Example) -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <img src="pic2.png" class="w-full h-full object-cover" alt="Customer enjoying coffee">
+          </div>
+
+          <!-- Item 4 (Video Example) -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <!-- Replace 'src' with your video path -->
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="vid1.mp4" type="video/mp4">
+            </video>
+            <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white backdrop-blur"><i class="fa-solid fa-video text-brand-gold mr-1"></i> Edible Cup Action</div>
+          </div>
+          
+          <!-- Item 5 (Image Example) -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <img src="pic3.png" class="w-full h-full object-cover" alt="Barista pouring coffee">
+          </div>
+
+          <!-- ================= DUPLICATE SET TO CREATE SEAMLESS LOOP ================= -->
+          
+          <!-- Item 1 (Video Example) Duplicate -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="vid2.mp4" type="video/mp4">
+            </video>
+            <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white backdrop-blur"><i class="fa-solid fa-video text-brand-gold mr-1"></i> Customer Review</div>
+          </div>
+          <!-- Item 2 (Image Example) Duplicate -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <img src="pic4.png" class="w-full h-full object-cover" alt="Stall view">
+          </div>
+          <!-- Item 3 (Image Example) Duplicate -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <img src="pic5.png" class="w-full h-full object-cover" alt="Customer enjoying coffee">
+          </div>
+          <!-- Item 4 (Video Example) Duplicate -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="vid3.mp4" type="video/mp4">
+            </video>
+            <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white backdrop-blur"><i class="fa-solid fa-video text-brand-gold mr-1"></i> Edible Cup Action</div>
+          </div>
+          <!-- Item 5 (Image Example) Duplicate -->
+          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+            <img src="pic6.png" class="w-full h-full object-cover" alt="Barista pouring coffee">
+          </div>
+
+        </div>
+      </div>
+      <!-- End Marquee -->
+    </section>
+
+    <section id="menu" class="py-24 relative bg-brand-navyLight/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <h2 class="font-cinzel text-3xl md:text-5xl font-bold text-white">Stall Menu & Drinks</h2>
+          <p class="text-slate-300 text-sm">Available at our KL stall. Choose standard or edible cup for the same price!</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Menu Item 1 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+            <!-- ⚠️ ADD COFFEE IMAGE HERE ⚠️ -->
+            <div class="h-48 w-full bg-brand-navy relative overflow-hidden">
+              <img src="https://placehold.co/600x400/1f1c63/f7b928?text=Add+Latte+Pic+Here" alt="Latte" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex flex-col grow">
+              <div class="flex justify-between items-start mb-2">
+                <span class="text-[11px] font-bold uppercase text-brand-gold bg-brand-gold/10 px-2 py-1 rounded">Signature</span>
+                <span class="text-lg font-cinzel font-bold text-brand-gold">RM 14.00</span>
+              </div>
+              <h3 class="font-cinzel text-lg font-bold text-white mb-2">Royal Spanish Latte</h3>
+              <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Rich double espresso blended with condensed and fresh milk for a smooth caramel finish.</p>
+              <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu Item 2 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+            <!-- ⚠️ ADD COFFEE IMAGE HERE ⚠️ -->
+            <div class="h-48 w-full bg-brand-navy relative overflow-hidden">
+              <img src="https://placehold.co/600x400/1f1c63/f7b928?text=Add+Mocha+Pic+Here" alt="Mocha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex flex-col grow">
+              <div class="flex justify-between items-start mb-2">
+                <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Chocolate</span>
+                <span class="text-lg font-cinzel font-bold text-brand-gold">RM 15.00</span>
+              </div>
+              <h3 class="font-cinzel text-lg font-bold text-white mb-2">Dark Cocoa Mocha</h3>
+              <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Malaysian artisanal dark cocoa blended with espresso and creamy milk. Best with the edible cup!</p>
+              <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu Item 3 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+            <!-- ⚠️ ADD COFFEE IMAGE HERE ⚠️ -->
+            <div class="h-48 w-full bg-brand-navy relative overflow-hidden">
+              <img src="https://placehold.co/600x400/1f1c63/f7b928?text=Add+Espresso+Pic+Here" alt="Espresso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex flex-col grow">
+              <div class="flex justify-between items-start mb-2">
+                <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Classic</span>
+                <span class="text-lg font-cinzel font-bold text-brand-gold">RM 11.00</span>
+              </div>
+              <h3 class="font-cinzel text-lg font-bold text-white mb-2">FA Double Espresso</h3>
+              <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Bold, concentrated aroma with a thick golden crema pulled freshly from our dark-roasted specialty beans.</p>
+              <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="stall" class="py-24 bg-brand-navyLight/50 border-t border-brand-gold/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+          
+          <!-- Stall Details -->
+          <div class="lg:col-span-5 space-y-6 flex flex-col justify-center">
+            <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-white">Visit The Palace</h2>
+            <p class="text-slate-300 text-sm">Experience the edible coffee cup sensation in person. We are located in the heart of Kuala Lumpur.</p>
+
+            <div class="glass-panel rounded-2xl p-6 border border-brand-gold/30 flex gap-4">
+              <i class="fa-solid fa-location-dot text-2xl text-brand-gold pt-1"></i>
+              <div>
+                <h3 class="font-cinzel font-bold text-white">FA Coffee Palace Stall</h3>
+                <p class="text-slate-300 text-sm mt-1 leading-relaxed">
+                  Stall Lot #xyz, Central Walkway,<br>
+                  Kuala Lumpur, Malaysia.
+                </p>
+              </div>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-6 border border-brand-gold/30 flex gap-4">
+              <i class="fa-solid fa-clock text-2xl text-brand-gold pt-1"></i>
+              <div class="w-full">
+                <h3 class="font-cinzel font-bold text-white mb-2">Opening Hours</h3>
+                <div class="text-sm text-slate-300 flex justify-between"><span>Mon - Thu:</span> <span>11:00 AM – 10:00 PM</span></div>
+                <div class="text-sm text-slate-300 flex justify-between"><span>Fri - Sat:</span> <span class="text-brand-gold">11:00 AM – 11:30 PM</span></div>
+                <div class="text-sm text-slate-300 flex justify-between"><span>Sun:</span> <span>11:00 AM – 10:00 PM</span></div>
+              </div>
+            </div>
+
+            <!-- ⚠️ UPDATE PHONE NUMBER BELOW ⚠️ -->
+            <a href="https://wa.me/60123456789" target="_blank" class="w-full py-4 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-lg transition-all">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Contact via WhatsApp
+            </a>
+          </div>
+
+          <!-- Maps Iframe -->
+          <div class="lg:col-span-7 h-[400px] lg:h-auto rounded-3xl overflow-hidden border-2 border-brand-gold/30 relative">
+            <!-- ⚠️ UPDATE GOOGLE MAPS IFRAME SRC URL BELOW ONCE PIN IS CLAIMED ⚠️ -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15935.21557340656!2d101.703214!3d3.14782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc36284f676057%3A0x6e788eb2fc3a8e9e!2sKuala%20Lumpur%2C%20Federal%20Territory%20of%20Kuala%20Lumpur!5e0!3m2!1sen!2smy!4v1710000000000!5m2!1sen!2smy"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="w-full h-full min-h-[300px]">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-navy border-t border-brand-navyLight py-8 text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="font-cinzel text-xl font-bold text-brand-gold mb-2">FA COFFEE PALACE</div>
+      <p class="text-xs text-slate-500">© 2026 FA Coffee Palace. Kuala Lumpur, Malaysia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle logic
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      // Close menu when a link is clicked
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Scroll styling for navbar
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-lg');
+      } else {
+        navbar.classList.remove('shadow-lg');
+      }
+    });
+  </script>
+</body>
+</html>
