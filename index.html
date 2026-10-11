@@ -9,7 +9,7 @@
   <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wghtS@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -190,7 +190,7 @@
               <!-- ⚠️ ADD YOUR MAIN EDIBLE CUP IMAGE HERE ⚠️ -->
               <!-- Replace the src URL with your actual image file path, e.g., src="assets/edible-cup-main.jpg" -->
               <img 
-                src="https://placehold.co/800x1000/161448/f7b928?text=Add+Main+Edible+Cup+Pic+Here" 
+                src="cup.png" 
                 alt="FA Coffee Palace Edible Cup Spotlight" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -306,13 +306,13 @@
           <!-- You can mix and match images and videos. Just duplicate the blocks below. -->
           
           <!-- Item 1 (Video Example) -->
-          <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
+          <!-- <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg"> -->
             <!-- Replace 'src' with your video path -->
-            <video autoplay loop muted playsinline class="w-full h-full object-cover">
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            </video>
-            <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white backdrop-blur"><i class="fa-solid fa-video text-brand-gold mr-1"></i> Customer Review</div>
-          </div>
+            <!-- <video autoplay loop muted playsinline class="w-full h-full object-cover"> -->
+              <!-- <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"> -->
+            <!-- </video> -->
+            <!-- <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white backdrop-blur"><i class="fa-solid fa-video text-brand-gold mr-1"></i> Customer Review</div> -->
+          <!-- </div> -->
 
           <!-- Item 2 (Image Example) -->
           <div class="w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-gold/20 bg-brand-navyLight relative shadow-lg">
@@ -384,17 +384,167 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           <!-- Menu Item 1 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Chocolate</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 9.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Chocolate</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Rich, creamy cocoa blended with perfectly steamed milk.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 2 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-brand-gold bg-brand-gold/10 px-2 py-1 rounded">Signature</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 8.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Espresso</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">A concentrated, bold, and intense shot of our signature roast.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 3 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Classic</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 8.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Long Black</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">A double shot of espresso poured over hot water for a robust flavor.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 4 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-brand-gold bg-brand-gold/10 px-2 py-1 rounded">Flavored</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 13.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Vanilla Latte</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Smooth espresso and steamed milk flavored with sweet, aromatic vanilla.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 5 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Chocolate</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 11.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Mocha</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">The perfect blend of bold espresso, velvety chocolate, and steamed milk.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 6 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-brand-gold bg-brand-gold/10 px-2 py-1 rounded">Flavored</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 13.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Caramel Latte</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Our classic latte infused with rich, buttery caramel.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 7 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Classic</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 11.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Latte</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">A comforting, balanced mix of espresso and silky steamed milk.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 8 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Classic</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 11.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Cappuccino</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Espresso topped with a deep, luxurious layer of frothy milk foam.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 9 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Classic</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 8.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Americano</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Classic espresso diluted with hot water for a smooth, lingering finish.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 10 -->
+            <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
+                <div class="p-6 flex flex-col grow">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[11px] font-bold uppercase text-brand-gold bg-brand-gold/10 px-2 py-1 rounded">Flavored</span>
+                    <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 13.00</span>
+                </div>
+                <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Caramel Macchiato</h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Steamed milk marked with espresso and finished with a sweet caramel drizzle.</p>
+                <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
+                    <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                </div>
+            </div>
+          
+          <!-- Menu Item 1 -->
           <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
             <!-- ⚠️ ADD COFFEE IMAGE HERE ⚠️ -->
-            <div class="h-48 w-full bg-brand-navy relative overflow-hidden">
+            <!-- <div class="h-48 w-full bg-brand-navy relative overflow-hidden">
               <img src="https://placehold.co/600x400/1f1c63/f7b928?text=Add+Latte+Pic+Here" alt="Latte" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
+            </div> -->
             <div class="p-6 flex flex-col grow">
               <div class="flex justify-between items-start mb-2">
                 <span class="text-[11px] font-bold uppercase text-brand-gold bg-brand-gold/10 px-2 py-1 rounded">Signature</span>
-                <span class="text-lg font-cinzel font-bold text-brand-gold">RM 14.00</span>
+                <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 9.00</span>
               </div>
-              <h3 class="font-cinzel text-lg font-bold text-white mb-2">Royal Spanish Latte</h3>
+              <h3 class="font-cinzel text-lg font-bold text-white mb-2">Espresso</h3>
               <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Rich double espresso blended with condensed and fresh milk for a smooth caramel finish.</p>
               <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
                 <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
@@ -405,15 +555,15 @@
           <!-- Menu Item 2 -->
           <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
             <!-- ⚠️ ADD COFFEE IMAGE HERE ⚠️ -->
-            <div class="h-48 w-full bg-brand-navy relative overflow-hidden">
+            <!-- <div class="h-48 w-full bg-brand-navy relative overflow-hidden">
               <img src="https://placehold.co/600x400/1f1c63/f7b928?text=Add+Mocha+Pic+Here" alt="Mocha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
+            </div> -->
             <div class="p-6 flex flex-col grow">
               <div class="flex justify-between items-start mb-2">
                 <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Chocolate</span>
-                <span class="text-lg font-cinzel font-bold text-brand-gold">RM 15.00</span>
+                <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 11.00</span>
               </div>
-              <h3 class="font-cinzel text-lg font-bold text-white mb-2">Dark Cocoa Mocha</h3>
+              <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Mocha</h3>
               <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Malaysian artisanal dark cocoa blended with espresso and creamy milk. Best with the edible cup!</p>
               <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
                 <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
@@ -424,15 +574,15 @@
           <!-- Menu Item 3 -->
           <div class="glass-panel rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold transition-all flex flex-col group">
             <!-- ⚠️ ADD COFFEE IMAGE HERE ⚠️ -->
-            <div class="h-48 w-full bg-brand-navy relative overflow-hidden">
+            <!-- <div class="h-48 w-full bg-brand-navy relative overflow-hidden">
               <img src="https://placehold.co/600x400/1f1c63/f7b928?text=Add+Espresso+Pic+Here" alt="Espresso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
+            </div> -->
             <div class="p-6 flex flex-col grow">
               <div class="flex justify-between items-start mb-2">
                 <span class="text-[11px] font-bold uppercase text-slate-300 bg-brand-navyLight px-2 py-1 rounded">Classic</span>
-                <span class="text-lg font-cinzel font-bold text-brand-gold">RM 11.00</span>
+                <span class="text-lg font-cinzel font-bold text-brand-gold">MYR 11.00</span>
               </div>
-              <h3 class="font-cinzel text-lg font-bold text-white mb-2">FA Double Espresso</h3>
+              <h3 class="font-cinzel text-lg font-bold text-white mb-2">Hot Latte</h3>
               <p class="text-slate-300 text-xs sm:text-sm mb-4 grow">Bold, concentrated aroma with a thick golden crema pulled freshly from our dark-roasted specialty beans.</p>
               <div class="pt-3 border-t border-brand-gold/20 text-[11px] text-brand-gold flex justify-between items-center">
                 <span>Standard/Edible Cup: <strong>Same Price</strong></span> <i class="fa-solid fa-cookie-bite"></i>
@@ -459,8 +609,8 @@
               <div>
                 <h3 class="font-cinzel font-bold text-white">FA Coffee Palace Stall</h3>
                 <p class="text-slate-300 text-sm mt-1 leading-relaxed">
-                  Stall Lot #xyz, Central Walkway,<br>
-                  Kuala Lumpur, Malaysia.
+                  Night Market, 38-90, 亚罗街, Bukit Bintang,<br>
+                  50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.
                 </p>
               </div>
             </div>
@@ -469,23 +619,21 @@
               <i class="fa-solid fa-clock text-2xl text-brand-gold pt-1"></i>
               <div class="w-full">
                 <h3 class="font-cinzel font-bold text-white mb-2">Opening Hours</h3>
-                <div class="text-sm text-slate-300 flex justify-between"><span>Mon - Thu:</span> <span>11:00 AM – 10:00 PM</span></div>
-                <div class="text-sm text-slate-300 flex justify-between"><span>Fri - Sat:</span> <span class="text-brand-gold">11:00 AM – 11:30 PM</span></div>
-                <div class="text-sm text-slate-300 flex justify-between"><span>Sun:</span> <span>11:00 AM – 10:00 PM</span></div>
+                <div class="text-sm text-slate-300 flex justify-between"><span>Mon - Thu:</span> <span>05:00 PM – 02:00 AM</span></div>
+                <div class="text-sm text-slate-300 flex justify-between"><span>Fri - Sun:</span> <span class="text-brand-gold">05:00 PM – 02:00 AM</span></div>
               </div>
             </div>
 
             <!-- ⚠️ UPDATE PHONE NUMBER BELOW ⚠️ -->
-            <a href="https://wa.me/60123456789" target="_blank" class="w-full py-4 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-lg transition-all">
+            <a href="https://wa.me/601151542801" target="_blank" class="w-full py-4 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-lg transition-all">
               <i class="fa-brands fa-whatsapp text-lg"></i> Contact via WhatsApp
             </a>
           </div>
 
           <!-- Maps Iframe -->
           <div class="lg:col-span-7 h-[400px] lg:h-auto rounded-3xl overflow-hidden border-2 border-brand-gold/30 relative">
-            <!-- ⚠️ UPDATE GOOGLE MAPS IFRAME SRC URL BELOW ONCE PIN IS CLAIMED ⚠️ -->
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15935.21557340656!2d101.703214!3d3.14782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc36284f676057%3A0x6e788eb2fc3a8e9e!2sKuala%20Lumpur%2C%20Federal%20Territory%20of%20Kuala%20Lumpur!5e0!3m2!1sen!2smy!4v1710000000000!5m2!1sen!2smy"
+              src="https://maps.google.com/maps?q=FA%20Coffee%20Palace,%20Night%20Market,%2038-90,%20Jln%20Alor,%20Bukit%20Bintang,%2050200%20Kuala%20Lumpur&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="w-full h-full min-h-[300px]">
             </iframe>
           </div>
